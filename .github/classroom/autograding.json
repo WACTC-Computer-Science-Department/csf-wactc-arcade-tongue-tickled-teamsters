@@ -1,0 +1,114 @@
+{
+  "tests": [
+    {
+      "name": "All required files exist",
+      "setup": "",
+      "run": "test -f index.html && test -f sketch.js && test -f game.js && test -f player.js && test -f enemies.js && test -f bullets.js && test -f collisions.js && test -f ui.js && echo 'PASS: All files found'",
+      "input": "",
+      "output": "PASS: All files found",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "README has team members listed",
+      "setup": "",
+      "run": "grep -c 'Member [12]' README.md | awk '{if ($1 >= 2) print \"PASS: Team members listed\"; else print \"FAIL\"}'",
+      "input": "",
+      "output": "PASS: Team members listed",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "README has game name filled in",
+      "setup": "",
+      "run": "if grep -q '\\[Your Game Name\\]' README.md; then echo 'FAIL: Game name not filled in'; else echo 'PASS: Game name customized'; fi",
+      "input": "",
+      "output": "PASS: Game name customized",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "player.js has required functions",
+      "setup": "",
+      "run": "grep -q 'function resetPlayer' player.js && grep -q 'function updatePlayer' player.js && grep -q 'function drawPlayer' player.js && echo 'PASS: Player functions found'",
+      "input": "",
+      "output": "PASS: Player functions found",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "player.js has real implementation (not just stubs)",
+      "setup": "",
+      "run": "LINES=$(grep -v '^\\/\\/' player.js | grep -v '^$' | grep -v '^ *\\/\\/' | wc -l); if [ $LINES -gt 30 ]; then echo 'PASS: Player has implementation'; else echo 'FAIL: Player still mostly stubs'; fi",
+      "input": "",
+      "output": "PASS: Player has implementation",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "enemies.js has required functions",
+      "setup": "",
+      "run": "grep -q 'function spawnEnemy' enemies.js && grep -q 'function updateEnemies' enemies.js && grep -q 'function drawEnemies' enemies.js && echo 'PASS: Enemy functions found'",
+      "input": "",
+      "output": "PASS: Enemy functions found",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "enemies.js has real implementation",
+      "setup": "",
+      "run": "LINES=$(grep -v '^\\/\\/' enemies.js | grep -v '^$' | grep -v '^ *\\/\\/' | wc -l); if [ $LINES -gt 30 ]; then echo 'PASS: Enemies has implementation'; else echo 'FAIL: Enemies still mostly stubs'; fi",
+      "input": "",
+      "output": "PASS: Enemies has implementation",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "collisions.js has collision checking",
+      "setup": "",
+      "run": "grep -q 'function checkAllCollisions' collisions.js && grep -q 'dist(' collisions.js && echo 'PASS: Collision detection implemented'",
+      "input": "",
+      "output": "PASS: Collision detection implemented",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "ui.js has all three screens",
+      "setup": "",
+      "run": "grep -q 'function drawMenu' ui.js && grep -q 'function drawHUD' ui.js && grep -q 'function drawGameOver' ui.js && echo 'PASS: All UI screens found'",
+      "input": "",
+      "output": "PASS: All UI screens found",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Game uses arrays (push or splice)",
+      "setup": "",
+      "run": "PUSH=$(grep -rl '\\.push(' player.js enemies.js bullets.js collisions.js | wc -l); SPLICE=$(grep -rl '\\.splice(' player.js enemies.js bullets.js collisions.js | wc -l); if [ $((PUSH + SPLICE)) -ge 2 ]; then echo 'PASS: Arrays used with push/splice'; else echo 'FAIL: Not enough array operations'; fi",
+      "input": "",
+      "output": "PASS: Arrays used with push/splice",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Multiple team members contributed (git log)",
+      "setup": "",
+      "run": "AUTHORS=$(git log --format='%an' | sort -u | wc -l); if [ $AUTHORS -ge 2 ]; then echo 'PASS: Multiple contributors'; else echo 'FAIL: Only one contributor found'; fi",
+      "input": "",
+      "output": "PASS: Multiple contributors",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
