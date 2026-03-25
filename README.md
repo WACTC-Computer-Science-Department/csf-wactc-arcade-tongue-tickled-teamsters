@@ -1,9 +1,9 @@
 # Team Game — Arrays & Loops
 
 ## Team
-- Member 1: [Name] — [assigned files]
-- Member 2: [Name] — [assigned files]
-- Member 3: [Name] — [assigned files]
+- Member 1: [Mianee] — [assigned files]
+- Member 2: [Christopher] — [assigned files]
+- Member 3: [Gabrila] — [assigned files]
 
 ## Game: [Your Game Name]
 [One sentence describing your game]
