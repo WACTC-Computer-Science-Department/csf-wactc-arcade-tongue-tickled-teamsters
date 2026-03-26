@@ -3,7 +3,7 @@
 ## Team
 - Member 1: [Mianee] — [assigned files]
 - Member 2: [Christopher] — [assigned files]
-- Member 3: [Gabrila] — [assigned files]
+- Member 3: [Gabriel] — [assigned files]
 
 ## Game: [Your Game Name]
 [One sentence describing your game]
