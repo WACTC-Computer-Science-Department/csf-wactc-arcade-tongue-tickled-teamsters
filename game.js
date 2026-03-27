@@ -1,6 +1,7 @@
 // ============================================
 // GAME CONFIGURATION
 // Edit these values to customize your game!
+// Will be changed by Mianee
 // ============================================
 
 // Canvas

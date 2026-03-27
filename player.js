@@ -1,5 +1,5 @@
 // ============================================
-// PLAYER — Your name here!
+// PLAYER — Mianee!
 // This file manages the player character.
 // ============================================
 
