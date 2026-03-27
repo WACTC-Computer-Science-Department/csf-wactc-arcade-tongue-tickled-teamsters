@@ -30,6 +30,10 @@ function drawPlayer() {
   // Use fill(), ellipse(), rect(), or any p5.js shape
   fill(COLOR_PLAYER);
   ellipse(playerX, playerY, PLAYER_SIZE * 2);
+  rect(playerX - 20, playerY, PLAYER_SIZE / 3, PLAYER_SIZE / 2);
+  rect(playerX + 20, playerY, PLAYER_SIZE / 3, PLAYER_SIZE / 2);
+  point (playerX - 5, playerY - 5);
+  point (playerX + 5, playerY - 5);
 }
 
 function handlePlayerKeyPress() {
