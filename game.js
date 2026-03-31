@@ -13,7 +13,7 @@ const COLOR_BACKGROUND = '#1a1a2e';
 const COLOR_PLAYER = '#00ff88';
 const COLOR_ENEMY = '#ff4444';
 const COLOR_BULLET = '#ffff00';
-const COLOR_UI = '#ffffff';
+const COLOR_UI = '#009751';
 
 // Player settings
 const PLAYER_SPEED = 5;
