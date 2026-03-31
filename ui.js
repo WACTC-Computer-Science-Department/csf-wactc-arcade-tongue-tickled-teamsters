@@ -23,7 +23,9 @@ function drawHUD() {
   textAlign(LEFT, TOP);
   textSize(14);
   text('Score: ' + score, 10, 10);
-  text('Lives: ' + playerLives, 10, 30);
+  textSize(24);
+  
+  text('Frogs left: ' + playerLives, 10, 450);
 }
 
 function drawGameOver() {
